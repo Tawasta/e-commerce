@@ -33,6 +33,7 @@
         'bin': [],
     },
     'depends': [
+        'models',
         'website_portal_sale',
     ],
     'data': [
