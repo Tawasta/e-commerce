@@ -4,7 +4,7 @@
 # 2. Known third party imports:
 
 # 3. Odoo imports (openerp):
-from odoo import api, fields, models, _
+from odoo import models, _
 
 # 4. Imports from Odoo modules:
 
@@ -35,7 +35,8 @@ class SaleOrder(models.Model):
                     break
 
         if not coupon_used:
-            error = _("This coupon is already in use or doesn't match any products in your cart.")
+            error = _("This coupon is already in use or doesn't \
+                      match any products in your cart.")
 
         if coupon_used and coupon.available > 0:
             coupon.available -= 1
