@@ -70,9 +70,3 @@ script:
 
 after_success:
   - travis_after_tests_success
-
-notifications:
-  webhooks:
-    - MATTERMOST_WEBHOOK
-    template:
-      - "{\"text\": \"Tarvis build test says hello\"}"
