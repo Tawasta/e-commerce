@@ -51,7 +51,7 @@ class WebsiteSaleCoupon(WebsiteSale):
         # Coupon is fine. Try to use it
         if 'error' not in res:
             coupon_used = request.website.sale_get_order(force_create=1)\
-                    ._use_coupon(coupon)
+                ._use_coupon(coupon)
             if coupon_used:
                 res['error'] = coupon_used
 
