@@ -73,6 +73,6 @@ after_success:
 
 notifications:
   template:
-    - "text: Hello"
+    - "{\"text\": \"Tarvis build test says hello\"}"
   webhooks:
     - MATTERMOST_WEBHOOK
