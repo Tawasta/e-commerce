@@ -72,7 +72,7 @@ after_success:
   - travis_after_tests_success
 
 notifications:
-  template:
-    - "{\"text\": \"Tarvis build test says hello\"}"
   webhooks:
     - MATTERMOST_WEBHOOK
+    template:
+      - "{\"text\": \"Tarvis build test says hello\"}"
