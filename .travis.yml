@@ -73,7 +73,6 @@ after_success:
 
 notifications:
   template:
-    - "text:"
-    - "{test}"
+    - "text: Hello"
   webhooks:
-    - $MATTERMOST_WEBHOOK
+    - MATTERMOST_WEBHOOK
