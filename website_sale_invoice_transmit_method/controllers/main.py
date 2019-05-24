@@ -24,8 +24,8 @@
 # 2. Known third party imports:
 
 # 3. Odoo imports (openerp):
-from odoo import http
-from odoo.http import request
+# from odoo import http
+# from odoo.http import request
 from odoo.addons.website_sale.controllers.main import WebsiteSale
 
 # 4. Imports from Odoo modules (rarely, and only if necessary):
@@ -41,5 +41,7 @@ class WebsiteSale(WebsiteSale):
         """
         Add invoice_transmit_method to saved values
         """
-        checkout['customer_invoice_transmit_method_id'] = all_values.get('customer_invoice_transmit_method_id', False)
-        return super(WebsiteSale, self)._checkout_form_save(mode, checkout, all_values)
+        checkout['customer_invoice_transmit_method_id'] = \
+            all_values.get('customer_invoice_transmit_method_id', False)
+        return super(WebsiteSale, self)\
+            ._checkout_form_save(mode, checkout, all_values)
