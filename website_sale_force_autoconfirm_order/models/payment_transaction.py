@@ -30,7 +30,7 @@ class PaymentTransaction(models.Model):
                                      acquirer_name,
                                      tx.sale_order_id.name,
                                      tx.sale_order_id.id)
-                    
+
                         tx.sale_order_id.with_context(send_email=True) \
                             .action_confirm()
 
