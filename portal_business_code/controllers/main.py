@@ -2,13 +2,16 @@
 from odoo import _
 from odoo.http import request
 from odoo.exceptions import ValidationError
-from odoo.addons.website_portal.controllers.main import website_account 
+from odoo.addons.website_portal.controllers.main import website_account
 
 
 class CustomerPortal(website_account):
 
-    OPTIONAL_BILLING_FIELDS = \
-        website_account.OPTIONAL_BILLING_FIELDS + ['business_id']
+    def __init__(self):
+        super(CustomerPortal, self).__init__()
+
+        self.OPTIONAL_BILLING_FIELDS = \
+            self.OPTIONAL_BILLING_FIELDS + ['business_id']
 
     def details_form_validate(self, data):
         error, error_message = \
