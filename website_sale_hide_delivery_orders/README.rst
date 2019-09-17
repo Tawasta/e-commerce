@@ -6,8 +6,8 @@
 Hide Delivery Orders Snippet
 ============================
 
-This module hides strong-tagged "Delivery Orders" and the downloadable link
-for users that do not belong to the group sales_team.group_sale_manager.
+This module hides strong-tagged "Delivery Orders" and the pdf-link for
+users that do not belong to the group sales_team.group_sale_manager.
 
 Configuration
 =============
